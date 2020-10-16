@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `Clients`;
-CREATE TABLE `Clients` (
+DROP TABLE IF EXISTS `Client`;
+CREATE TABLE `Client` (
   `client_number` varchar(4) DEFAULT NULL,
   `name` varchar(9) DEFAULT NULL,
   `address` varchar(21) DEFAULT NULL,
@@ -9,17 +9,17 @@ CREATE TABLE `Clients` (
   `planet` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `Clients` VALUES ('B062','skywalker','72, south street','San Francisco','B2',-3200,'Tatooine'),('B112','skywalker','23, Dumont street','London','C1',1250,'Tatooine'),('B332','Monti','112, Neuve street','Geneva','B2',0,'earth'),('B512','Gillet','14, summer street','Toulouse','B1',-8700,'earth'),('C003','Avron','8, Cure street','Toulouse','B1',-1700,'earth'),('C400','Ferard','65, Tertre street','Paris','B2',350,'earth'),('F010','Toussaint','5, Godefroid street','Paris','C1',0,'earth'),('F400','Jacob','78, Moulin street','Brussels','C2',0,'earth'),('K111','Vanbist','180, Florimont Street','Brussels','B1',720,'earth'),('L422','Franck','60, Wépion street','Amstredam','C1',0,'earth'),('S127','Vanderka','3, Rose avenue','Rotterdam','C1',-4580,'earth'),('S712','Guillaume','14a, Rose street','Paris','B1',0,'earth'),('F011','PONCELET','17,Clos des Erables','Toulouse','B2',0,'earth'),('K729','NEUMAN','40,r.Bransart','Toulouse','',0,'earth');
+INSERT INTO `Client` VALUES ('B062','skywalker','72, rue de la Gare','Namur','B2',-3200,'Tatooine'),('B112','skywalker','23, rue Dumont','Poitiers','C1',1250,'Tatooine'),('B332','Monti','112, rue Neuve','Genève','B2',0,'terre'),('B512','Gillet','14, rue de l\'Eté','Toulouse','B1',-8700,'terre'),('C003','Avron','8, rue de la Cure','Toulouse','B1',-1700,'terre'),('C400','Ferard','65, rue du Tertre','Poitiers','B2',350,'terre'),('F010','Toussaint','5, rue Godefroid','Poitiers','C1',0,'terre'),('F400','Jacob','78, chemin du Moulin','Bruxelles','C2',0,'terre'),('K111','Vanbist','180, rue Florimont','Lille','B1',720,'terre'),('L422','Franck','60, rue de Wépion','Namur','C1',0,'terre'),('S127','Vanderka','3, avenue des Roses','Namur','C1',-4580,'terre'),('S712','Guillaume','14a, chemin des Roses','Paris','B1',0,'terre'),('F011','PONCELET','17,Clos des Erables','Toulouse','B2',0,'terre'),('K729','NEUMAN','40,r.Bransart','Toulouse','',0,'terre');
 
 
-DROP TABLE IF EXISTS `Orders`;
-CREATE TABLE `Orders` (
+DROP TABLE IF EXISTS `Order`;
+CREATE TABLE `Order` (
   `order_number` mediumint(9) DEFAULT NULL,
   `client_number` varchar(4) DEFAULT NULL,
   `order_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `Orders` VALUES (30178,'K111','2019-03-04'),(30179,'C400','2019-02-01 14:09:02'),(30182,'S127','2020-02-02'),(30184,'C400','2020-02-03 15:09:00'),(30185,'F011','2018-07-04 17:00:00'),(30186,'C400','2015-01-09 17:00:00'),(30188,'B512','1230-01-03 18:00:00');
+INSERT INTO `Order` VALUES (30178,'K111',''),(30179,'C400',''),(30182,'S127',''),(30184,'C400',''),(30185,'F011',''),(30186,'C400',''),(30188,'B512','');
 
 
 DROP TABLE IF EXISTS `Detail`;
@@ -50,4 +50,4 @@ CREATE TABLE `Product` (
   `stock_quantity` smallint(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `Product` VALUES ('CS262','Chocolate bar',75,1),('CS264','Candy bar',2,2690),('CS464','Blue cheese',3,450),('PA60','Water bottle',1,134),('PS222','Sprite bottle',2,1220),('PA45','Coke can',3,580),('PH222','Vodka bottle',15,782);
+INSERT INTO `Product` VALUES ('CS262','Chev. Sapin 200*6*2',75,45),('CS264','Chev. Sapin 200*6*4',120,2690),('CS464','Chev. Sapin 400*6*4',220,450),('PA60','Pointe Acier 60 (10K)',95,134),('PS222','PL. Sapin 200*20*2',185,1220),('PA45','POINTE ACIER 45 (20K)',105,580),('PH222','PL HETRE 200x20x2',230,782);
