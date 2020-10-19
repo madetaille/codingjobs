@@ -1,11 +1,12 @@
-We want to create a website where users can ask questions.
+We want to create a website where users can ask questions. 
+The necessary fields for table Users: email,  last_connection (date and time) and Questions: title, content 
 
-The necessary fields:
-Users: email, last_connection (date and time)
-Questions: title, content
+1. Add the foreign key to the correct table (hint: always in the child table). Use CASCADE options for the foreign key constraints.
 
-1. Add the foreign key to the correct table (hint: always in the child table)
+2. Design the UML diagram of this relationship
 
-2. Design the UML diagram of this relationship.
+3. Using PHPMyAdmin, create the tables and relationships. Use CASCADE options for the foreign key constraints.
 
-3. Add some records by making the necessary links.
+4. Using PHPMyAdmin, insert some users and questions.
+
+5. Delete a user. What is the effect on the question tables? 
